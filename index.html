@@ -11,19 +11,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
     <!-- Archivo reset Normalize -->
+    <link rel="preload" href="css/normalize.css" as="styles">
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Archivo de estilos -->
+    <link rel="preload" href="css/styles.css" as="styles">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <title>Profile Card Component</title>
 </head>
-
 <body>
-
-    <!-- Marcado HTML -->
-
+    <main class="container">
+        <!-- BACKGROUND -->
+        <div class="bg-top"></div>
+        <div class="bg-bottom"></div>
+        <!-- CARD -->
+        <section class="card">
+            <div class="card--container-top"></div>
+            <div class="card--img"><img src="images/image-victor.jpg" alt="avatar"></div>
+            <!-- CARD ELEMENTS -->
+            <div class="card--body">
+                <h3 class="card--name">Victor Crest<span class="card--age">26</span></h3>
+                <h4 class="card--city">London</h4>
+                <div class="card--info">
+                    <h3 class="card--amt">80K <span class="card--followers block">Followers</span></h3>
+                    <h3 class="card--amt">803K <span class="card--likes block">Likes</span></h3>
+                    <h3 class="card--amt">1.4K <span class="card--photos block">Photos</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-
 </html>

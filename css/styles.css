@@ -1,19 +1,150 @@
-/* -----------------
-Tabla de contenidos:
---------------------
-1. Fuente ................ 11
-2. Variables ............. 17
-3. Estilos generales ..... 32
--------------------- 
-*/
+:root {
+    /* Colores primarios */
+    --DarkCyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    
+    /* Colores neutrales */
+    --DarkGray: hsl(0, 0%, 59%);
+    
+    /* Tipografia */
+    --Font-size: 18px;
+    --Font-Family: 'Kumbh Sans', 'sans-serif';
+    --Weights: 400, 700;
+} 
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--DarkCyan);
+    font-size: 1.8rem;
+    color: var(--VeryDarkDesaturatedBlue);
+    font-family: var(--Font-Family);
+    overflow: hidden;
+    padding: 0rem 2rem;
+}
+@media (min-width: 475px) {
+    body {
+        padding: 0;
+    }
+}
+img {
+    display: inline-block;
+}
 
-
-/* ----- Fuente ----- */
-
-
-/* ----- Variables ----- */
-
-
-/* ----------------------------- */
-/* ----- Estilos generales ----- */
-/* ----------------------------- */
+/* MAIN */
+.card{
+    background-color: white;
+    text-align: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    width: max-content;
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.40);
+    -moz-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.40);
+    box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.25);
+}
+.card--container-top {
+    background: url(../images/bg-pattern-card.svg);
+    background-size: cover;   
+    width: 40rem;
+    height: 15rem;
+} 
+.card--img img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -50px auto -30px auto;
+    border: 5px solid hsl(0, 0%, 100%);
+}
+.card--body {
+    margin-top: 2.43rem;
+}
+.card--name {
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    position: relative;
+}
+.card--name:hover {
+    color: var(--DarkCyan);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: jump 1s ease-in-out;
+}
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial, en medio y final de la animación */
+    }
+    40% {
+        transform: translateY(-15px); /* Altura máxima durante la animación */
+    }
+    60% {
+        transform: translateY(-10px); /* Altura intermedia durante la animación */
+    }
+}
+.card--age {
+    color: var(--DarkGrayishBlue);
+    margin-left: 1rem;
+    font-weight: normal;
+}
+.card--city {
+    color: var(--DarkGrayishBlue);
+    font-weight: normal;
+    margin-top: 0;
+}
+.card--info {
+    border-top: 1.5px solid hsl(0, 0%, 59%, 0.3);
+    padding: 0.5rem;
+    justify-content: space-around;
+    overflow: hidden;
+}
+@media (min-width: 325px) {
+    .card--info {
+        display: flex;
+    }
+}
+.block {
+    display: block;
+    margin-top: 0.6rem;
+}
+.card--followers, .card--likes, .card--photos {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: var(--DarkGray);
+    letter-spacing: 0.19rem;
+    cursor:context-menu;
+}
+.card--amt:hover {
+    cursor: pointer;
+    display: inline-block;
+    color: var(--DarkCyan);
+    animation: jump 1s ease-in-out;
+} 
+.bg-top {
+    background: url(../images/bg-pattern-top.svg);
+    height: 90rem;
+    width: 90rem;
+    top: -350px;
+    left: -200px;
+}
+.bg-bottom {
+    background: url(../images/bg-pattern-bottom.svg);
+    height: 90rem;
+    width: 90rem;
+    bottom: -500px;
+    right: -200px;
+}
+.bg-top, .bg-bottom {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
